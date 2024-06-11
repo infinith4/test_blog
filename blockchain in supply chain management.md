@@ -1,0 +1,11 @@
+Here is a list of articles, videos, and training materials on the use of blockchain in supply chain management, including titles, summaries, URLs, and publication dates:
+
+| Title | Summary | URL | Publication Date |
+|-------|---------|-----|------------------|
+| **Blockchain in Supply Chain: Benefits, Use Cases & Applications** | Discusses the benefits of blockchain in supply chains such as reducing risk, increasing visibility, and enhancing trust. Also covers use cases like Walmart and IBM Food Trust. | [Turing.com](https://www.turing.com/blog/blockchain-in-supply-chain-benefits-use-cases-applications) | November 28, 2022 |
+| **Using Blockchain to Drive Supply Chain Transparency and Innovation** | Explores how blockchain can enhance supply chain transparency, provide real-time data verification, and reduce inefficiencies. Features Deloitte-led projects as case studies. | [Deloitte](https://www2.deloitte.com/us/en/pages/consulting/articles/blockchain-supply-chain-transparency.html) | 2022 |
+| **Blockchain in Supply Chain: 5 Uses and Examples** | Highlights five key uses of blockchain in supply chains, such as promoting ethical sourcing, improving payment efficiency, and enhancing communication. | [Built In](https://builtin.com/blockchain/blockchain-supply-chain) | 2023 |
+| **Using Blockchain to Trace Products Through the Supply Chain** | Focuses on the benefits of blockchain for tracing products in the supply chain, including improved compliance with regulations and better root cause analysis. | [Foley & Lardner LLP](https://www.foley.com/en/insights/publications/2022/05/blockchain-trace-products-supply-chain) | May 4, 2022 |
+| **Blockchain for Supply Chain Management Training Course** | An online course that covers the fundamentals of blockchain technology and its applications in supply chain management, including case studies and practical examples. | [AZTech Training](https://aztechtraining.com/course/blockchain-for-supply-chain-management) | Ongoing |
+
+These resources offer a comprehensive overview of how blockchain can be utilized to improve supply chain operations, enhance transparency, and ensure compliance with various regulations. The training materials also provide an opportunity for deeper learning and practical application of blockchain in supply chains.
