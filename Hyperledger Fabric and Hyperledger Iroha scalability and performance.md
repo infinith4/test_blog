@@ -22,3 +22,49 @@ Hyperledger Fabric and Hyperledger Iroha are both blockchain frameworks under th
 - **Performance**: Hyperledger Fabric can handle a higher throughput and more complex transaction workflows, whereas Hyperledger Iroha excels in simplicity and ease of integration with moderate performance capabilities.
 
 For specific details and performance benchmarks, you can refer to the respective technical documentation and performance evaluation studies of both Hyperledger Fabric and Hyperledger Iroha.
+
+
+
+------
+
+
+
+### Hyperledger Fabric vs. Hyperledger Iroha: Scalability and Performance
+
+#### Hyperledger Fabric v2.5
+
+**Performance Benchmarks:**
+- **Transactions Per Second (TPS):** Hyperledger Fabric 2.5 achieved approximately 3,000 TPS in a controlled benchmark environment.
+- **Latency:** Average latency for transaction confirmation was around 0.35 seconds.
+- **Hardware and Topology:** Tests were conducted with two peer organizations, each with one peer node, and a single orderer service node. All nodes were running on Intel Xeon Silver 4210 CPUs with 40 cores and 64GB of RAM.
+- **Configuration:** The system utilized LevelDB for state storage, TLS for security, and the peer Gateway service for transaction processing. The block cutting parameters were set to a block time of 2 seconds and a block size of 500 transactions【32†source】【34†source】.
+
+#### Hyperledger Iroha v2
+
+**Performance Benchmarks:**
+- **Transactions Per Second (TPS):** Hyperledger Iroha v2 showed a TPS of around 1,500 in similar controlled environments.
+- **Latency:** The average transaction confirmation latency was approximately 0.5 seconds.
+- **Hardware and Topology:** Similar to Fabric, Iroha was tested on a network with multiple nodes, each running on comparable hardware configurations (e.g., Intel Xeon CPUs, 32-64GB of RAM).
+- **Configuration:** Iroha’s consensus mechanism is YAC (Yet Another Consensus), optimized for high throughput and quick finality, suitable for use cases requiring fast and frequent updates【35†source】.
+
+### Key Differences
+
+1. **Consensus Mechanism:**
+   - **Fabric:** Uses a pluggable consensus mechanism with Raft being commonly used, which can support high throughput and is configurable for various use cases.
+   - **Iroha:** Utilizes YAC, designed for high-speed consensus and quick transaction finality, ideal for applications needing frequent updates.
+
+2. **Network Complexity:**
+   - **Fabric:** Supports complex network topologies with multiple roles such as endorsing peers, orderers, and validating peers, allowing for detailed control over transaction processing and validation.
+   - **Iroha:** Simplified architecture with a focus on ease of use and straightforward node roles, making it easier to set up and maintain but potentially less flexible for complex scenarios.
+
+3. **Performance Scalability:**
+   - **Fabric:** Generally shows higher scalability with its ability to handle a larger number of transactions per second and lower latency, attributed to its robust and configurable infrastructure.
+   - **Iroha:** Offers competitive performance but is slightly less scalable compared to Fabric, making it suitable for medium-scale applications where simplicity and ease of integration are more critical.
+
+For more detailed information on specific performance metrics and benchmarking methodologies, you can refer to the [Hyperledger Fabric documentation](https://www.hyperledger.org/resources/publications/white-paper-fabric-performance) and the [Hyperledger Iroha performance testing results](https://wiki.hyperledger.org/display/iroha/Performance+testing)【32†source】【33†source】【34†source】【35†source】.
+
+
+https://www.hyperledger.org/blog/2023/02/16/benchmarking-hyperledger-fabric-2-5-performance
+https://hyperledger.github.io/caliper/
+https://wiki.hyperledger.org/display/iroha/Performance+testing
+https://www.hyperledger.org/learn/publications/blockchain-performance-metrics
