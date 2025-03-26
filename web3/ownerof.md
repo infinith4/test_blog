@@ -1,3 +1,5 @@
+0хас344d02874336701b2fb7612823997816b1f23e
+
 ```
 import { ethers } from "ethers";
 
