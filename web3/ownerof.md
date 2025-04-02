@@ -93,3 +93,26 @@ contract.on("Transfer", (from, to, value) => {
 });
 ```
 このコードを追加すれば、`Transfer` イベントが発生するたびにリアルタイムでキャッチできます。
+
+
+
+```
+async function findDeploymentTx(contractAddress) {
+    const latestBlock = await provider.getBlockNumber();
+
+    for (let block = latestBlock; block > latestBlock - 10000; block--) { // 過去10000ブロックをスキャン
+        const blockData = await provider.getBlockWithTransactions(block);
+        
+        for (let tx of blockData.transactions) {
+            if (tx.creates && tx.creates.toLowerCase() === contractAddress.toLowerCase()) {
+                console.log("Contract deployed in Block:", tx.blockNumber);
+                console.log("Transaction Hash:", tx.hash);
+                return;
+            }
+        }
+    }
+    console.log("No deployment transaction found in the last 10,000 blocks.");
+}
+
+findDeploymentTx(contractAddress);
+```
