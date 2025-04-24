@@ -1,3 +1,7 @@
+https://www.notion.com/templates/notion-projects-and-tasks
+
+https://www.notion.com/ja/templates/category/agile
+
 
 ### 🎯 **Objective 1: プロジェクトを高品質かつスケジュール通りに成功裏に完了させる**
 
