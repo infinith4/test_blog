@@ -22,11 +22,11 @@ Get-ChildItem -Path C:\* -Include "package.json", "package-lock.json", "yarn.loc
 WSL環境も以下のコマンドで一括チェックできます。
 
 ```bash
-find / -type f \( -name "package.json" -o -name "package-lock.json" -o -name "yarn.lock" -o -name "pnpm-lock.yaml" \) -exec grep -HlE 'axios.*(1\.14\.1|0\.30\.4)' {} + 2>/dev/null
+sudo find / -type f \( -name "package.json" -o -name "package-lock.json" -o -name "yarn.lock" -o -name "pnpm-lock.yaml" \) -exec grep -HlE 'axios.*(1\.14\.1|0\.30\.4)' {} + 2>/dev/null
 ```
 
 ```bash
-find / -type f \( -name "package.json" -o -name "package-lock.json" -o -name "yarn.lock" -o -name "pnpm-lock.yaml" \) -exec grep -HlE 'axios.*' {} + 2>/dev/null
+sudo find / -type f \( -name "package.json" -o -name "package-lock.json" -o -name "yarn.lock" -o -name "pnpm-lock.yaml" \) -exec grep -HlE 'axios.*' {} + 2>/dev/null
 ```
 
 ---
