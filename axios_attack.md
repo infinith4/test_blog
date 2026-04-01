@@ -9,6 +9,10 @@
 Get-ChildItem -Path C:\* -Include "package.json", "package-lock.json", "yarn.lock", "pnpm-lock.yaml" -Recurse -ErrorAction SilentlyContinue | Select-String -Pattern 'axios.*(1\.14\.1|0\.30\.4)'
 ```
 
+```powershell
+Get-ChildItem -Path C:\* -Include "package.json", "package-lock.json", "yarn.lock", "pnpm-lock.yaml" -Recurse -ErrorAction SilentlyContinue | Select-String -Pattern 'axios.*'
+```
+
 * **解説**: `-Include` で主要な設定ファイルを網羅しています。
 * **ヒットした場合**: その行に `1.14.1` や `0.30.4` という文字が含まれていたら、そのプロジェクトは「過去に汚染されたバージョンを確定させてしまった」状態です。
 
@@ -19,6 +23,10 @@ WSL環境も以下のコマンドで一括チェックできます。
 
 ```bash
 find / -type f \( -name "package.json" -o -name "package-lock.json" -o -name "yarn.lock" -o -name "pnpm-lock.yaml" \) -exec grep -HlE 'axios.*(1\.14\.1|0\.30\.4)' {} + 2>/dev/null
+```
+
+```bash
+find / -type f \( -name "package.json" -o -name "package-lock.json" -o -name "yarn.lock" -o -name "pnpm-lock.yaml" \) -exec grep -HlE 'axios.*' {} + 2>/dev/null
 ```
 
 ---
